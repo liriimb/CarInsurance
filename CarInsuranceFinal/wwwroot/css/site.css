@@ -1,0 +1,231 @@
+html {
+    font-size: 14px;
+    height: 100%; /* Ensure full page height */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: #f0f8ff; /* Light blueish-white */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+main {
+    flex-grow: 1; /* Ensure main content fills available space */
+}
+
+/* Focus styles for input and buttons */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Card styles */
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Link-item styles with hover effect */
+.link-item {
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+    .link-item::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 2px;
+        background-color: #007bff;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+        transform: scaleX(0);
+    }
+
+    .link-item:hover {
+        transform: scale(1.02);
+        color: #0056b3;
+    }
+
+        .link-item:hover::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+/* Button styles for car and claim actions */
+.btn-add-car, .btn-add-claim {
+    background-color: #FFB703; /* Honey Yellow */
+    color: white; /* Text color */
+    transition: transform 0.1s, background-color 0.3s; /* Smooth transitions */
+}
+
+    .btn-add-car:hover, .btn-add-claim:hover {
+        background-color: #FB8500; /* Portokall */
+        transform: scale(1.02); /* Slightly grow the button */
+    }
+
+/* Navbar and Footer Background Color */
+.navbar{
+    background-color: #002244; /* Dark royal blue */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+    /* Hover effect for navbar and footer links */
+    .navbar-nav .nav-link, .footer a, .link-item {
+        color: white;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+    }
+
+        .navbar-nav .nav-link::after, .footer a::after, .link-item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 2px;
+            background-color: #FFB703; /* Honey Yellow */
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+            transform: scaleX(0);
+        }
+
+        .navbar-nav .nav-link:hover, .footer a:hover, .link-item:hover {
+            color: #FFB703; /* Change to honey yellow on hover */
+            transform: scale(1.02);
+        }
+
+            .navbar-nav .nav-link:hover::after, .footer a:hover::after, .link-item:hover::after {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+/* Container styles */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .card {
+        margin: 10px;
+    }
+
+    .container-fluid {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+/*index design*/
+/* Styling for Welcome Section */
+.welcome-section {
+    margin-top: 30px;
+}
+
+    .welcome-section h1 {
+        font-size: 2.5rem;
+        color: #002244; /* Dark royal blue */
+    }
+
+    .welcome-section .role-message {
+        font-size: 1.8rem;
+        margin-top: 10px;
+        color: #FFB703; /* Honey yellow */
+    }
+
+    .welcome-section .insurance-status {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #0056b3;
+    }
+
+.quick-links {
+    margin-top: 30px;
+}
+
+    .quick-links a {
+        margin-right: 15px;
+    }
+
+/* Styling for Guest Section */
+.guest-section {
+    margin-top: 50px;
+}
+
+    .guest-section h1 {
+        font-size: 2.5rem;
+        color: #002244; /* Dark royal blue */
+    }
+
+.reasons-to-choose {
+    margin-top: 30px;
+}
+
+    .reasons-to-choose h2 {
+        font-size: 1.8rem;
+        color: #0056b3; /* Blue */
+    }
+
+.benefits-list {
+    list-style-type: disc; /* Bullet points */
+    list-style-position: inside; /* Align bullets inside the box */
+    margin-left: 0; /* Remove left margin for centering */
+    padding-left: 0; /* Remove padding for centering */
+    text-align: left; /* Align text to the left */
+    font-size: 1.1rem; /* Maintain font size */
+}
+    .benefits-list li {
+        text-align: center; /* Center the text of list items */
+        margin: 5px 0; /* Add vertical spacing between items */
+    }
+
+.register-now {
+    margin-top: 30px;
+}
+
+    .register-now h3 {
+        font-size: 1.5rem;
+    }
+
+    .register-now .btn {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #FFB703;
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+
+        .register-now .btn:hover {
+            background-color: #FB8500; /* Darker orange */
+        }
